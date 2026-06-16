@@ -19,6 +19,13 @@ void addContact(Contact contacts[], int *count){
     printf("Enter email:");
     scanf(" %[^\n]" , new_contact.email);
 
+    char *at = strchr(new_contact.email, '@');
+    char *dot = strchr(new_contact.email, '.');
+
+    if ( at == NULL || dot == NULL || dot > at) {
+        printf("Invalid email format.\n");
+        return;
+    }
     contacts[*count] = new_contact;
     (*count)++;
 
