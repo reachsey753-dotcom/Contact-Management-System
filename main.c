@@ -16,8 +16,7 @@ int main()
         printf("2. Edit\n");
         printf("3. Delete\n");
         printf("4. Search Contact\n");
-        printf("5. Save New Contact\n");
-        printf("6. Exit\n");
+        printf("5. Exit\n");
         printf("=====================================\n\n");
     
         printf("Enter Option:");
@@ -29,7 +28,7 @@ int main()
             addContact(contacts, &count);
             break;
         case 2:
-            printf("2. Edit\n");
+            editContact(contacts, count);
             break;
         case 3:
             deleteContact(contacts, &count);
@@ -38,9 +37,6 @@ int main()
             searchContact(contacts, count);
             break;
         case 5:
-            printf("5. Save New Contact\n");
-            break;
-        case 6:
             printf("Exiting......\n");
             running = 0;
             break;
