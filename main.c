@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "file.h"
-#include "file.c"
 
 int main()
 {
@@ -19,25 +18,24 @@ int main()
         printf("4. Search Contact\n");
         printf("5. Save New Contact\n");
         printf("6. Exit\n");
-        printf("======================================\n\n");
+        printf("=====================================\n\n");
     
         printf("Enter Option:");
         scanf("%d", &choice);
 
         switch (choice)
         {
-            addContact(contacts, &count);
         case 1:
-            
+            addContact(contacts, &count);
             break;
         case 2:
             printf("2. Edit\n");
             break;
         case 3:
-            printf("3. Delete\n");
+            deleteContact(contacts, &count);
             break;
         case 4:
-            printf("4. Search Contact\n");
+            searchContact(contacts, count);
             break;
         case 5:
             printf("5. Save New Contact\n");
