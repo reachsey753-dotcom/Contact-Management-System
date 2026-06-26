@@ -5,6 +5,7 @@
 #define MAX_PHONE 20
 #define MAX_EMAIL 50
 #define MAX_CONTACT 100
+#define FILENAME "contacts.txt"
 
 typedef struct {
 
@@ -18,5 +19,9 @@ void addContact(Contact contacts[], int *count);
 void searchContact(Contact contacts[] , int count);
 void deleteContact(Contact contacts[], int *count);
 void editContact(Contact contacts[], int count);
+
+// file handling
+void saveContact(Contact contacts[], int count);
+void loadContact(Contact contacts[], int *count);
 
 #endif
