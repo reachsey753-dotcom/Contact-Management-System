@@ -8,7 +8,8 @@ int main()
     int choice = 0;
     int running = 1;
 
-    
+    loadContact(contacts, &count);
+
     while (running)
     {
         printf("======Contact Management System======\n");
@@ -18,7 +19,7 @@ int main()
         printf("4. Search Contact\n");
         printf("5. Exit\n");
         printf("=====================================\n\n");
-    
+
         printf("Enter Option:");
         scanf("%d", &choice);
 
@@ -26,12 +27,15 @@ int main()
         {
         case 1:
             addContact(contacts, &count);
+            saveContact(contacts, count);
             break;
         case 2:
             editContact(contacts, count);
+            saveContact(contacts, count);
             break;
         case 3:
             deleteContact(contacts, &count);
+            saveContact(contacts, count);
             break;
         case 4:
             searchContact(contacts, count);
